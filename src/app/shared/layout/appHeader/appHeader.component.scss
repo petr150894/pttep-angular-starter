@@ -1,0 +1,43 @@
+﻿@import '../../../../styles/variables';
+
+.app-header {
+  height: $page-header-height;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: $blue-middle-light;
+  z-index: $z-index-page-header;
+  color: $white;
+}
+
+.app-header__logo {
+  background: url('.../../../../../../assets/images/PTTEP_Logo.png') no-repeat;
+  height: $page-header-height - 10px;
+  min-width: 60px;
+  background-size: contain;
+}
+
+.app-header__title {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.app-header__page-title {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  color: $blue-dark;
+}
+
+.app-header__user-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+  height: $page-header-height;
+  flex: 1 0 auto;
+  color: $blue-dark;
+}

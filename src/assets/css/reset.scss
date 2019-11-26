@@ -1,0 +1,92 @@
+/* from Estelle Weyl's blog
+    http://www.standardista.com/css-reset/ */
+
+/* CSS BROWSER RESET */
+
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+input,
+textarea,
+label,
+blockquote,
+table,
+th,
+td,
+section,
+header {
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  font-size: 100%;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+a,
+span {
+  background-repeat: no-repeat;
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img,
+abbr,
+acronym {
+  border: none;
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+  font-weight: normal;
+}
+
+q::before,
+q::after {
+  content: '';
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}

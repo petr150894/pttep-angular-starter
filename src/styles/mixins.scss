@@ -1,0 +1,111 @@
+﻿@import './variables';
+
+/*
+  It describes common styles for page body
+*/
+@mixin pageContent {
+  padding: 30px;
+}
+
+
+/*
+  It describes common behavior on mouse hover.
+*/
+  @mixin hover {
+    &:hover {
+      opacity: 0.8;
+
+      @content;
+    }
+  }
+
+/*
+  It describes common behavior for disabled elements (inputs, dropdowns, buttons and etc.)
+*/
+  @mixin disabled {
+    &.disabled,
+    &[disabled] {
+        opacity: 0.3;
+        cursor: default;
+        pointer-events: none;
+        @content;
+      }
+  }
+
+/*
+  It describes light shadow for any page block.
+*/
+  @mixin light-shadow {
+    -webkit-box-shadow: 0px 5px 20px -4px $gray-dark;
+    box-shadow: 0px 5px 20px -4px $gray-dark;
+  }
+  
+/*
+  It applies to form block which consists of title and input.
+*/
+  @mixin input-group {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+/*
+  It applies together with 'input-group' mixin, which has been described above.
+*/
+  @mixin input-group-label {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+/*
+  It applies to form input. Can be applied with 'input-group' mixin, which has been described above.
+*/
+  @mixin form-input {
+    height: 35px;
+    font-size: 14px;
+    padding: 5px;
+    border: 2px solid $blue-light;
+    color: $black;
+    outline: none;
+
+    &[disabled] {
+      border-color: $gray;
+      background-color: $white;
+    }
+
+    &.out-of-bounds {
+      border-color: $orange;
+    }
+
+    &.invalid {
+      border-color: $red;
+    }
+
+    &:-ms-input-placeholder {
+      color: $gray;
+    }
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+
+/*
+  Textarea field. Can be applied with 'input-group' mixin, which has been described above.
+*/
+  @mixin form-textarea {
+    @include form-input;
+    overflow: auto;
+    height: 70px;
+    resize: none;
+    outline: none;
+  }
+
+/*
+  break-word mode for text blocks
+*/
+@mixin break-word {
+  word-wrap: break-word;
+  word-break: break-all;
+}

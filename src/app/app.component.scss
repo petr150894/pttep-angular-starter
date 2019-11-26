@@ -1,0 +1,9 @@
+@import '../styles/index.scss';
+
+html, body {
+    font-family: sans-serif;
+}
+
+.page-content {
+    @include pageContent;
+}
